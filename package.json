@@ -46,6 +46,7 @@
     "gsap": "^3.11.3",
     "jquery": "^3.6.1",
     "jquery-scrolla": "^0.0.3",
+    "locomotive-scroll": "^4.1.4",
     "lozad": "^1.16.0"
   }
 }

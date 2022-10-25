@@ -10,86 +10,159 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
     <link rel="icon" src="favicon.ico" />
   </head>
-  <body data-barba="wrapper">
+  <body >
 
-    <div class="wrapper" data-barba="container" data-barba-namespace="home">
-      <header></header>
-      <main class="main-warpper home-page" >
-        <section class="banner-section">
-          <h1 ><span class="anim1">Created in design, <br>
-             </span>  <span class="anim2"> 
-              delivered in experience.</span></h1>
-          <p>Mauris pulvinar est lectus, et feugiat augue ornare ut magna mauris, feugiat vitae ultrices
-            quis, ullamcorper sed justo. Etiam placerat, massa vitae auctor sagittis sem odio efficitur nisl et porttitor sapien est sed augue.</p>
+    <div id="page" class="site">
+
+      <div id="feather" class="feather"></div>
+    
+      <header id="masthead" class="site-header" role="banner">
+        <nav class="anchor-nav" role="navigation">
+          <a href="#intro" class="anchor">Home</a>
+          <a href="#panel-1" class="anchor">Panel 1</a>
+          <a href="#panel-3" class="anchor">Panel 3</a>
+          <a href="#panel-5" class="anchor">Panel 5</a>
+          <a href="#map" class="anchor">Map</a>
+        </nav>
+      </header>
+    
+      <main id="content" class="site-content" role="main">
+    
+        <section id="intro" class="full-screen pt-5 blue">
+          <h1>A cool title</h1>
+    
+          <div id="clouds-layer-1" class="clouds"></div>
+          <div id="clouds-layer-2" class="clouds"></div>
         </section>
-        
-        <section class="team-section">
-          <div class="container">
-          <h2 class="link-title">Creative team</h2>
-            <div class="di-flex team-content" id="mainPeople">
-              <div class="card">
-                <div class="person-info">
-                  <div class="user-img">
-                    <img src="<%= require('./img/users/person.jpg') %>" alt="">
+    
+        <section id="panels">
+    
+          <div id="panels-container" style="width: 500%;">
+            <article id="panel-1" class="panel full-screen red">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+    
+                    <img src="" alt="">
+    
                   </div>
-                  <div class="user-info">
-                    <p class="name">Manesh Swamy</p>
-                    <p class="degig">Creative, Social & Design  - SVP</p>
-                  </div>
-                </div>
-
-              </div>
-              <div class="card">
-                <div class="person-info">
-                  <div class="user-img">
-                    <img src="<%= require('./img/users/person.jpg') %>" alt="">
-                  </div>
-                  <div class="user-info">
-                    <p class="name">Dipshika Ravi</p>
-                    <p class="degig">Creative - AVP</p>
+                  <div class="col-6 d-flex flex-column">
+    
+                    <h2>Panel 1</h2>
+    
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+    
+                    <div class="panels-navigation text-right">
+                      <div class="nav-panel" data-sign="plus"><a href="#panel-2" class="anchor">Next</a></div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <div class="person-info">
-                  <div class="user-img">
-                    <img src="<%= require('./img/users/person.jpg') %>" alt="">
+            </article>
+            <article id="panel-2" class="panel full-screen orange">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+    
+                    <img src="" alt="">
+    
                   </div>
-                  <div class="user-info">
-                    <p class="name">Nishant Patil (Bappi)</p>
-                    <p class="degig">Senior Creative Director</p>
+                  <div class="col-6 d-flex flex-column">
+    
+                    <h2>Panel 2</h2>
+    
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+    
+                    <div class="panels-navigation">
+                      <div class="nav-panel" data-sign="minus"><a href="#panel-1" class="anchor">Prev</a></div>
+                      <div class="nav-panel" data-sign="plus"><a href="#panel-3" class="anchor">Next</a></div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="card">
-                <div class="person-info">
-                  <div class="user-img">
-                    <img src="<%= require('./img/users/person.jpg') %>" alt="">
+            </article>
+            <article id="panel-3" class="panel full-screen purple">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+    
+                    <img src="" alt="">
+    
                   </div>
-                  <div class="user-info">
-                    <p class="name">Tessa George</p>
-                    <p class="degig">Associate Creative Director - Creative</p>
+                  <div class="col-6 d-flex flex-column">
+    
+                    <h2>Panel 3</h2>
+    
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+    
+                    <div class="panels-navigation">
+                      <div class="nav-panel" data-sign="minus"><a href="#panel-2" class="anchor">Prev</a></div>
+                      <div class="nav-panel" data-sign="plus"><a href="#panel-4" class="anchor">Next</a></div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- <div class="card">
-                <div class="person-info">
-                  <div class="user-img">
-                    <img src="./img/users/person.jpg" alt="">
+            </article>
+            <article id="panel-4" class="panel full-screen green">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+    
+                    <img src="" alt="">
+    
                   </div>
-                  <div class="user-info">
-                    <p class="name">Manesh Swamy</p>
-                    <p class="degig">Creative, Social & Design  - SVP</p>
+                  <div class="col-6 d-flex flex-column">
+    
+                    <h2>Panel 4</h2>
+    
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+    
+                    <div class="panels-navigation">
+                      <div class="nav-panel" data-sign="minus"><a href="#panel-3" class="anchor">Prev</a></div>
+                      <div class="nav-panel" data-sign="plus"><a href="#panel-5" class="anchor">Next</a></div>
+                    </div>
                   </div>
                 </div>
-              </div> -->
-            </div>
+              </div>
+            </article>
+            <article id="panel-5" class="panel full-screen gray">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+    
+                    <img src="" alt="">
+    
+                  </div>
+                  <div class="col-6 d-flex flex-column">
+    
+                    <h2>Panel 5</h2>
+    
+                    <p class="step-description">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
+                    </p>
+    
+                    <div class="panels-navigation text-right">
+                      <div class="nav-panel" data-sign="minus"><a href="#panel-4" class="anchor">Prev</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </section>
+    
+        <section id="map" class="full-screen"></section>
+    
       </main>
+    
     </div>
-
-    <footer></footer>
-
   </body>
 </html>

@@ -1,0 +1,32 @@
+.panel {
+  height: 100vh;
+}
+.line {
+  width: 100%;
+  max-width: 800px;
+  height: 8px;
+  margin: 0 0 10px 0;
+  position: relative;
+  display: inline-block;
+  background-color: rgba(255,255,255,1);
+}
+
+/* by default, ScrollTrigger sets overflow to auto so that the scrollbar is factored in particularly when pinning so that the pinned elements' sizes are correct, but with LocomotiveScroll we want to force that to be hidden because it does its own [fake] scrollbar */
+.smooth-scroll {
+  overflow: hidden !important;
+}
+.blue{
+  background-color: blue;
+}
+.red{
+  background-color: red;
+}
+.orange{
+  background-color: orange;
+}
+.purple{
+  background-color: purple;
+}
+.gray{
+  background-color: gray;
+}
