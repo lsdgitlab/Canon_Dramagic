@@ -3,7 +3,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LocomotiveScroll from "locomotive-scroll";
 // import { LocomotiveScroll } from "LocomotiveScroll";
 gsap.registerPlugin(ScrollTrigger);
-
+ScrollTrigger.defaults({
+  markers: true,
+});
 // --- SETUP START ---
 // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 const locoScroll = new LocomotiveScroll({

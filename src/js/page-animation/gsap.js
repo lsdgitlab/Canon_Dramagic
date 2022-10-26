@@ -1,7 +1,18 @@
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger"; 
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+import {CSSRulePlugin}  from "gsap/CSSRulePlugin";
+import {CSSPlugin} from "gsap/CSSPlugin";
+// import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, CSSPlugin, CSSRulePlugin);
+var rule = CSSRulePlugin.getRule("span:after");
+console.log("rule")             
+console.log(rule)             
+// 6 Show Timeline
+var tl = gsap.timeline({defaults:{ease:"ShowMo.easeOut"}});
+tl.from(".anim1", {y:"100%", rotation: 10, duration: 1.8,stagger: .6, opacity: 0}).to(".anim1", {y:"0%", duration: 1.8, rotation: 0, opacity:1 })
+var tl = gsap.timeline({defaults:{ease:"ShowMo.easeOut"}});
+tl.from(".anim2", {y:"100%", rotation: 10, duration: 1.8,stagger: .6, opacity: 0}).to(".anim2", {y:"0%", duration: 1.8, rotation: 0, opacity:1 })
 
 /* Main navigation */
 let panelsSection = document.querySelector("#panels"),
@@ -45,3 +56,19 @@ tween = gsap.to(panels, {
 		end: () =>  "+=" + (panelsContainer.offsetWidth - innerWidth)
 	}
 });
+
+// const childSplit = new SplitText("h1", {
+//   type: "lines",
+//   linesClass: "split-child"
+// });
+// const parentSplit = new SplitText("h1", {
+//   // type: "lines",
+//   linesClass: "split-parent"
+// });
+
+// gsap.from(childSplit.lines, {
+//   duration: 1.5,
+//   yPercent: 100,
+//   ease: "power4",
+//   stagger: 0.1
+// });
