@@ -2,10 +2,10 @@
 :root {
   --easing: cubic-bezier(0.5, 0.7, 0.4, 1);
 }
-body {
-  // --page-background: #404046;
-  // background-color: var(--page-background);
-}
+// body {
+//   // --page-background: #404046;
+//   // background-color: var(--page-background);
+// }
 // @import ur;
 // // 1. Configuration and helpers
 @import
@@ -23,6 +23,7 @@ body {
   'base/base',
   'base/fonts',
   'base/typography',
+  'base/anination',
   'base/helpers';
 
 

@@ -93,9 +93,9 @@ h2 {
   bottom: 2rem;
   right: 2rem;
 }
-.site-header{
-  // background-color: red;
-}
+// .site-header{
+//   // background-color: red;
+// }
 
 .main-img{
   height: 100%;
@@ -125,24 +125,63 @@ h2 {
     margin: 0;
     line-height: 1;
   }
-  h1{
-    font-size: 100px;
-    margin: 0;
+  // h1{
+  //   font-size: 100px;
+  //   margin: 0;
+  //   // line-height: 1;
+  //   position: relative;
+  //   overflow: hidden;
+  // }
+  // h1 > div {
+  //   position: relative;
+  //   margin: 0;
+  // }
+  // .split-parent {
+  //   overflow: hidden;
+  // }
+  // .split-child {
+  //   display: inline-block;
+  // }
+  // .text-heading {
+  //   // width: 900px;
+  //   // -webkit-animation-name: slideOutUp;
+  //   // animation-name: slideOutUp;
+  //   // animation-duration: 1s;
+  // }
+  .anim2{
+    overflow: hidden;
     // line-height: 1;
     position: relative;
+    span{
+      display: inline-block;
+      transform: translateY(100%);
+    }
+  } 
+  h1 {
+    font-size: 100px;
+    color: #ffffff;
+    font-weight: 800;
     overflow: hidden;
-  }
-  h1 > div {
+    // line-height: 1;
     position: relative;
-    margin: 0;
+    span {
+      display: inline-block;
+      transform: translateY(-100%);
+      // white-space: nowrap;
+      // rotate(-10deg)
+      // transform: rotate(5deg);
+      // overflow: hidden;
+      // z-index: 2;
+      // position: relative;
+      // top: 0;
+      // left: 0;
   }
-  .split-parent {
-    overflow: hidden;
+    // span {
+    //   display: block;
+    //   overflow: hidden;
+    // }
   }
-  .split-child {
-    display: inline-block;
-  }
-  .text-heading {
-    width: 900px;
+  .border{
+    border-bottom: 2px solid #fff;
   }
 }
