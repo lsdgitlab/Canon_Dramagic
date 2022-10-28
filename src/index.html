@@ -10,20 +10,37 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
     <link rel="icon" src="favicon.ico" />
   </head>
-  <body >
+  <body>
 
     <div id="page" class="site">
 
       <div id="feather" class="feather"></div>
     
       <header id="masthead" class="site-header" role="banner">
-        <nav class="anchor-nav" role="navigation">
-          <a href="#intro" class="anchor">Home</a>
-          <a href="#panel-1" class="anchor">Panel 1</a>
-          <a href="#panel-3" class="anchor">Panel 3</a>
-          <a href="#panel-5" class="anchor">Panel 5</a>
-          <a href="#map" class="anchor">Map</a>
-        </nav>
+        <div class="logo"><img src="./img/canon-logo.png" alt="logo"></div>        
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+        </div>
+        <button class="enquire-btn" id="enquire" name="enquireBtn">Enquire Now</button>
+        
+        
+          <nav class="anchor-nav menubar" role="navigation">
+            <ul>
+              <li><a href="#intro" class="menuname">ABOUT R6 MARK II</a></li>
+              <li><a href="#panel-1" class="menuname">WATCH THE FILM</a></li>
+              <li><a href="#panel-3" class="menuname">EXPLORE FEATURES</a></li>
+              <li><a href="#panel-5" class="menuname">VIEW PRICE</a></li>
+            </ul>
+          </nav>
+
+  <div class="enquire">
+    <form name="enquireForm" class="" method="post" action="">
+      <div class="" style="padding:200px;"></div>
+    </form>
+    <button class="close-btn">X</button>
+  </div>
+        
+        
       </header>
     
       <main id="content" class="site-content" role="main">
