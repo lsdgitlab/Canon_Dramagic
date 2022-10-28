@@ -192,13 +192,7 @@ header{
       }
     }
   }
-  .menubar {
-    // display: none;  
-    // background: #000;          
-    // border-top: medium none;
-    // height: 100vh;
-    // position: fixed;
-    // width: 100%;
+  .menubar {    
     position: fixed;
     z-index: -1;
     top: 0;
@@ -220,8 +214,9 @@ header{
       li{
         a{
           display: block;
-          color: #ff0000;
+          color: $red;
           font-size: 55px;
+          font-weight: 600;
           font-style: italic;
           text-align: left;
           border-bottom: 1px solid rgba(128,128,128,0.5);
@@ -240,13 +235,26 @@ header{
       z-index: 5;
       left: 0;
       background: rgba(0,0,0,1);
+      &::after {
+        content: "";
+        background: $black;
+        position: absolute;
+        top: 0;
+        right: -140px;
+        height: 100vh;
+        width: 140px;
+        
+      }
     }    
   }
 } 
+
 .enquire {
   display: none;  
-  padding: 200px;
-  background: #ff0000;
+  // padding: 200px;
+  width: 800px;
+  height: 800px;
+  background: $red;
   position: absolute;
   top: -113%;
   right: -15%;
@@ -255,14 +263,179 @@ header{
   .close-btn {
     cursor: pointer;
     background: #ffffff;
-    width: 95px;
-    height: 95px;
+    // width: 95px;
+    // height: 95px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
     border: none;
     position: absolute;
     top: 34.5%;
-    left: -45px;
+    // left: -48px;
+    left: -38px;
+    font-size: 25px;
+    font-weight: 700;
   }
+
+  .form-wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 20% 0 0;    
+    margin-left: -53px;
+    max-width: 300px;
+    width: 100%;
+    .form-content{
+      .col-input{
+        position: relative;
+        margin-bottom: 10px;
+        .control{
+
+        }
+        .label{
+          width: 100%;
+          font-size: 18px;
+          vertical-align: middle;
+          &.error{
+            color: #fff;
+          }
+        }
+        input:not(.radio-box), select {
+          border: none;
+          border-bottom: 1px solid $white;        
+          padding: 8px 28px 8px 0;
+          width: 100%;
+          background-color: $red;
+          color: $white;
+          box-sizing: border-box;
+          outline: none;
+          height: 48px;
+          // font-size: 20px;
+          font-size: 18px;
+          &::-webkit-input-placeholder {
+            color: #fff;
+            opacity: 1;
+            font-weight: 300;
+          }
+          &:-ms-input-placeholder {
+            color: #fff;
+            opacity: 1;
+            font-weight: 300;
+          }
+          &::placeholder{
+            color: #fff;
+            opacity: 1;
+            font-weight: 300;
+          }        
+          &.error{
+            border-color: #fff;
+            background-color: rgba(227, 73, 73, 0.05);
+            &::-webkit-input-placeholder{
+              color: #fff;
+              font-weight: 300;
+            }
+            &::placeholder{
+              color: #fff;
+              font-weight: 300;
+            }
+            &::placeholder{
+              color: #fff;
+              font-weight: 300;
+            }
+          }
+        }
+        select{
+          background: $red url("../../../img/down-arrow.png") scroll no-repeat right top;
+          background-position: 96% 50%;
+          appearance: none;
+        }
+        .invalid,
+        .isempty {
+          font-size: 16px;
+          color: #fff;
+          margin: 0;
+          margin-top: 8px;
+          display: none;
+          position: absolute;
+          left: 0;
+          top: auto;
+        }
+      }
+    }
+    .submit-btn {
+      cursor: pointer;
+      width: 115px;
+      height: 115px;
+      background: $white;
+      text-transform: uppercase;
+      color: #010300;
+      font-size: 22px;
+      border-radius: 50%;
+      border: 1px solid $white;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .radio-control{
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+    .radiobox {
+      display: inline-block;
+      vertical-align: top;
+      font-size: initial;
+      margin-right: 6px;
+      color: $white;
+      label {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        cursor: pointer;
+        position: relative;
+      }
+      .radio-box {
+        background: $black;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-right: 6px;
+        opacity: 0;
+        position: absolute;        
+      }
+      .radio-box{
+        &+label{
+          &:before {
+            content: '';
+            background: $black;
+            border: 2px solid $black;
+            display: inline-block;
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            padding: 2px;
+            margin-right: 8px;
+            text-align: center;
+            border-radius: 50%;
+        }
+        }
+        &:checked{
+          &+label{
+            &::before {
+              background: $white;
+              box-shadow: inset 0px 0px 0px 4px $black;
+            }
+          }
+        }
+      }
+      
+      
+    }
+
+  }  
+
 }
 
 

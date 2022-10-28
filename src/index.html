@@ -34,9 +34,67 @@
           </nav>
 
   <div class="enquire">
-    <form name="enquireForm" class="" method="post" action="">
+    <!-- <form name="enquireForm" class="" method="post" action="">
       <div class="" style="padding:200px;"></div>
-    </form>
+    </form> -->
+    <div class="form-wrapper">
+      <form class="form-content" id="enquiry">
+        <div class="col-input">
+          <div class="control">
+            <input type="text" class="form-control" name="fname" id="fname" placeholder="Name"
+              data-invalid="Please enter the valid name." required>
+          </div>
+          <p class="invalid">Please enter the valid name.</p>
+        </div>      
+        <div class="col-input">
+          <div class="control">
+            <input class="form-control" type="tel" placeholder="Phone" maxlength="10"
+              onkeypress="return AllowOnlyNumbers(event);" required>
+          </div>
+          <p class="invalid">Please enter the valid phone number.</p>
+        </div>
+        <div class="col-input">
+          <div class="control">
+            <input class="form-control" type="email" placeholder="Email" required>
+          </div>
+          <p class="invalid">Please enter the valid email id.</p>
+        </div>      
+        <div class="col-input">
+          <div class="control">
+            <select name class="form-control" required>
+              <option value class="placeholder">Location</option>
+              <option value="1">Mumbai</option>
+              <option value="2">Delhi</option>
+              <option value="2">Banglore</option>
+              <option value="2">Pune</option>
+            </select>
+          </div>
+          <p class="invalid">Please select location.</p>
+        </div>  
+        <div class="col-input">
+          <div class="control">
+            <input class="form-control" type="email" placeholder="Job title" required>
+          </div>
+          <p class="invalid">Please enter the job title.</p>
+        </div>  
+        <div class="col-input">
+          <div class="control radio-control">
+            <div class="radiobox">
+              <input type="radio" name="radio" class="form-control radio-box" id="radio1" required>
+              <label class="label" for="radio1">Seeking Information</label>
+            </div>
+            <div class="radiobox">
+              <input type="radio" name="radio" class="form-control radio-box" id="radio2" required>
+              <label class="label" for="radio2">Purchase</label>
+            </div>
+            <p class="invalid">Please select.</p>
+          </div>
+        </div>                          
+        <button type="submit" onclick="event.preventDefault(); submitData('getInTouch');"
+          class="submit-btn">Submit</button>
+      </form>
+    </div>
+    
     <button class="close-btn">X</button>
   </div>
         
