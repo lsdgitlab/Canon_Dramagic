@@ -1,0 +1,283 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  max-width: $max-width; /* 1 */
+  margin-left: auto; /* 2 */
+  margin-right: auto; /* 2 */
+  padding-left: 20px; /* 3 */
+  padding-right: 20px; /* 3 */
+  width: 100%; /* 1 */
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+a{
+  text-decoration: none;
+}
+.container {
+  width: 100%;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+.link-title{
+  display: flex;
+  margin: 0 200px;
+  align-items: center;
+  margin-bottom: 48px;
+  
+  // justify-content: s;
+  h2{
+    font-size: 40px;
+    letter-spacing: -1px;
+    line-height: 1.5;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Montserrat";
+    margin-right: 16px;
+  }
+  img{
+    display: block;
+    margin: 0;
+  }
+}
+.main-warpper{
+  min-height: 60vh;
+}
+.di-grid{
+  display: grid;
+}
+.sticky-nav{
+  background-color: #000000;
+  padding: 24px;
+  text-align: center;
+  a{
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+    display: inline-block;
+    margin: 0 16px;
+    &.active{
+      color: #f15b25;
+    }
+    &:hover{
+      color: #8b8b8b;
+    }
+  }
+}
+.second-title{
+  font-size: 30px;
+  line-height: 1.5;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "Montserrat";
+  margin-bottom: 24px;
+  span{
+    font-size: 16px;
+    color: #ffffff3d;
+  }
+}
+.pad-60{
+  margin: 30px 0;
+}
+.brands-carousel{
+  .image-container{
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    img{
+      display: block;
+    }
+  }
+  .recog-text{
+    padding: 24px;
+    background-color: #00000051;
+    justify-content: space-between;
+    a{
+      font-size: 12px;
+      line-height: 30px;
+      color: #000000;
+      font-weight: 600;
+      font-family: "Montserrat";
+    }
+  }
+  .art-card{
+    background-color: #ffffff;
+    img{
+      width: auto;
+    }
+  }
+}
+.select-control{
+  position: relative;
+  top: 0;
+  left: 0;
+  .select-label{
+    position: absolute;
+    top: -8px;
+    left: 16px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Montserrat";
+    padding: 0 8px;
+  }
+  select{
+    height: 50px;
+    background-color: rgba(255,255,255,0);
+    border: 1px solid #ffffff;
+    width: 100%;
+    padding: 8px 24px;
+    -moz-appearance: none;
+    -webkit-appearance:none;
+    appearance: none;
+    // background-image: url("./../img/arrow-bottom.svg");
+    // background-image: url("./../../img/arrow-bottom.svg");
+    // background-image: url("/../../../img/arrow-bottom.svg");
+    background-position: 96% 50%;
+    background-repeat: no-repeat;
+    // color: #000000;
+    color: #888888;
+    font-size: 14px;
+    // letter-spacing: 0px;
+    line-height: 1.5;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: "Montserrat";
+    option {
+      color: #000000;
+    }
+    option:first-child {
+      color: #888888;
+      background-color: transparent;
+      opacity: 1;
+    }
+    &.error{
+      color: #E34949;
+      opacity: 1;
+
+    }
+  }
+}
+.films-contain{
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  .filmes-card{
+    margin-bottom: 16px;
+    .title{
+      font-size: 20px;
+      line-height: 1.5;
+      color: #ffffff;
+      font-weight: 700;
+      font-family: "Montserrat";
+      margin-top: 16px;
+    }
+    .brand-link{
+      font-size: 12px;
+      line-height: 1.5;
+      text-decoration: underline;
+      color: #ffffff;
+      font-weight: 400;
+      font-family: "Montserrat";
+    }
+    .image-content{
+      display: grid;
+      position: relative;
+      top: 0;
+      left: 0;
+      .tumb , .top-row{
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+        width: 100%;
+      }
+      .dimond{
+        position: absolute;
+        left: 24px;
+        top: 24px;
+      }
+      .play-btn{
+        position: absolute;
+        left: 24px;
+        bottom: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container{
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container{
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media (max-width: 992px) {
+  .container{
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}

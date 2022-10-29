@@ -48,7 +48,7 @@ module.exports = (env, argv) => ({
         patterns: [
           // {from: 'src/*.html', to: '[name].[ext]'},
           // { from: './src/assets', to: './assets' },
-          // { from: "./src/img", to: "./img" },
+          { from: "./src/img/bg", to: "./img/bg" },
           { from: "./src/video", to: "./video" },
           { from: "./src/favicon.ico", to: "./favicon.ico" },
           // { from: 'src/images/*',to: 'images/[name].[ext]'}

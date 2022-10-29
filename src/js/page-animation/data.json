@@ -1,0 +1,79 @@
+{
+  "restaurants": [
+    {
+      "name": "Starbucks",
+      "reviews": [
+        {
+          "date": "2022-01-11T15:26:51.324Z",
+          "rating": 3.8,
+          "comment": "test comment 1"
+        },
+        {
+          "date": "2022-01-20T11:46:51.324Z",
+          "rating": 1.1,
+          "comment": "test comment 2"
+        },
+        {
+          "date": "2022-03-21T10:46:51.324Z",
+          "rating": 4.2,
+          "comment": "test comment 3"
+        },
+        {
+          "date": "2022-04-19T19:26:51.324Z",
+          "rating": 1.9,
+          "comment": "test comment 4"
+        }
+      ]
+    },
+    {
+      "name": "Subway",
+      "reviews": [
+        {
+          "date": "2022-05-16T11:40:51.324Z",
+          "rating": 2.8,
+          "comment": "test comment 1"
+        },
+        {
+          "date": "2022-05-12T15:46:51.324Z",
+          "rating": 4.1,
+          "comment": "test comment 2"
+        },
+        {
+          "date": "2022-01-27T15:46:51.324Z",
+          "rating": 2.2,
+          "comment": "test comment 3"
+        },
+        {
+          "date": "2022-02-26T10:26:51.324Z",
+          "rating": 2.9,
+          "comment": "test comment 4"
+        }
+      ]
+    },
+    {
+      "name": "Dominos",
+      "reviews": [
+        {
+          "date": "2022-02-16T11:40:51.324Z",
+          "rating": 4.8,
+          "comment": "test comment 1"
+        },
+        {
+          "date": "2022-05-01T15:46:51.324Z",
+          "rating": 4.1,
+          "comment": "test comment 2"
+        },
+        {
+          "date": "2022-01-27T15:46:51.324Z",
+          "rating": 2.6,
+          "comment": "test comment 3"
+        },
+        {
+          "date": "2022-02-26T10:26:51.324Z",
+          "rating": 2.7,
+          "comment": "test comment 4"
+        }
+      ]
+    }
+  ]
+}

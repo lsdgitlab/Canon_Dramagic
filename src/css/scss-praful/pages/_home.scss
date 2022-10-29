@@ -1,0 +1,191 @@
+/* Most of these styles could be removed but are for the demo to look better */
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-weight: 300;
+}
+body {
+  overflow-x: hidden;
+}
+
+a {
+  color: white;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.full-screen {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#masthead {
+  position: fixed;
+  // display: -webkit-box;
+  // display: -ms-flexbox;
+  // display: flex;
+  z-index: 9999;  
+  width: calc(100% - 140px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 60px 0;
+}
+#masthead a {
+  // padding: 1rem 2rem;
+}
+
+
+#panels #panels-container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ddd;
+}
+#panels #panels-container .panel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #333;
+  text-align: left;
+  // border-right: 1px solid #f00;
+}
+#panels #panels-container .panel img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+#panels #panels-container .panel .panels-navigation {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+#panels #panels-container .panel .anchor-panel,
+#panels #panels-container .panel .nav-panel {
+  color: #000;
+  text-transform: uppercase;
+  margin-right: 2rem;
+}
+#panels #panels-container .panels-navigation {
+  position: absolute;
+  width: 100%;
+  bottom: 2rem;
+  right: 2rem;
+}
+// .site-header{
+//   // background-color: red;
+// }
+
+.main-img{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top:0;
+}
+.positon-rel{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.position-abs{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  p, h1{
+    color: #fff;
+    text-align: center;
+  }
+  p{
+    font-size: 50px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1;
+  }
+  // h1{
+  //   font-size: 100px;
+  //   margin: 0;
+  //   // line-height: 1;
+  //   position: relative;
+  //   overflow: hidden;
+  // }
+  // h1 > div {
+  //   position: relative;
+  //   margin: 0;
+  // }
+  // .split-parent {
+  //   overflow: hidden;
+  // }
+  // .split-child {
+  //   display: inline-block;
+  // }
+  // .text-heading {
+  //   // width: 900px;
+  //   // -webkit-animation-name: slideOutUp;
+  //   // animation-name: slideOutUp;
+  //   // animation-duration: 1s;
+  // }
+  .anim2{
+    overflow: hidden;
+    // line-height: 1;
+    position: relative;
+    span{
+      display: inline-block;
+      transform: translateY(100%);
+    }
+  } 
+  h1 {
+    font-size: 100px;
+    color: #ffffff;
+    font-weight: 800;
+    overflow: hidden;
+    // line-height: 1;
+    position: relative;
+    span {
+      display: inline-block;
+      transform: translateY(-100%);
+      // white-space: nowrap;
+      // rotate(-10deg)
+      // transform: rotate(5deg);
+      // overflow: hidden;
+      // z-index: 2;
+      // position: relative;
+      // top: 0;
+      // left: 0;
+  }
+    // span {
+    //   display: block;
+    //   overflow: hidden;
+    // }
+  }
+  .border{
+    border-bottom: 2px solid #fff;
+  }
+}

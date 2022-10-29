@@ -17,42 +17,223 @@
       <div id="feather" class="feather"></div>
     
       <header id="masthead" class="site-header" role="banner">
-        <nav class="anchor-nav" role="navigation">
-          <a href="#intro" class="anchor">Home</a>
-          <a href="#panel-1" class="anchor">Panel 1</a>
-          <a href="#panel-3" class="anchor">Panel 3</a>
-          <a href="#panel-5" class="anchor">Panel 5</a>
-          <a href="#map" class="anchor">Map</a>
+        <div class="di-flex ">
+          <div class="logo"><img src="<%= require('./img/canon-logo.png') %>" alt="logo"></div>        
+          <div>
+            <div class="hamburger-menu">
+              <div class="bar"></div>
+            </div>
+            <button class="enquire-btn" id="enquire" name="enquireBtn">Enquire Now</button>
+
+          </div>
+        </div>
+        <nav class="anchor-nav menubar" role="navigation">
+          <ul>
+            <li><a href="#intro" class="menuname">ABOUT R6 MARK II</a></li>
+            <li><a href="#panel-1" class="menuname">WATCH THE FILM</a></li>
+            <li><a href="#panel-3" class="menuname">EXPLORE FEATURES</a></li>
+            <li><a href="#panel-5" class="menuname">VIEW PRICE</a></li>
+          </ul>
         </nav>
+        <div class="enquire">
+          <div class="form-wrapper">
+            <form class="form-content" id="enquiry">
+              <div class="col-input">
+                <div class="control">
+                  <input type="text" class="form-control" name="fname" id="fname" placeholder="Name"
+                    data-invalid="Please enter the valid name." required>
+                </div>
+                <p class="invalid">Please enter the valid name.</p>
+              </div>      
+              <div class="col-input">
+                <div class="control">
+                  <input class="form-control" type="tel" placeholder="Phone" maxlength="10"
+                    onkeypress="return AllowOnlyNumbers(event);" required>
+                </div>
+                <p class="invalid">Please enter the valid phone number.</p>
+              </div>
+              <div class="col-input">
+                <div class="control">
+                  <input class="form-control" type="email" placeholder="Email" required>
+                </div>
+                <p class="invalid">Please enter the valid email id.</p>
+              </div>      
+              <div class="col-input">
+                <div class="control">
+                  <select name class="form-control" required>
+                    <option value class="placeholder">Location</option>
+                    <option value="1">Mumbai</option>
+                    <option value="2">Delhi</option>
+                    <option value="2">Banglore</option>
+                    <option value="2">Pune</option>
+                  </select>
+                </div>
+                <p class="invalid">Please select location.</p>
+              </div>  
+              <div class="col-input">
+                <div class="control">
+                  <input class="form-control" type="email" placeholder="Job title" required>
+                </div>
+                <p class="invalid">Please enter the job title.</p>
+              </div>  
+              <div class="col-input">
+                <div class="control radio-control">
+                  <div class="radiobox">
+                    <input type="radio" name="radio" class="form-control radio-box" id="radio1" required>
+                    <label class="label" for="radio1">Seeking Information</label>
+                  </div>
+                  <div class="radiobox">
+                    <input type="radio" name="radio" class="form-control radio-box" id="radio2" required>
+                    <label class="label" for="radio2">Purchase</label>
+                  </div>
+                  <p class="invalid">Please select.</p>
+                </div>
+              </div>                          
+              <button type="submit" onclick="event.preventDefault(); submitData('getInTouch');"
+                class="submit-btn">Submit</button>
+            </form>
+          </div>
+          <button class="close-btn">X</button>
+        </div>
       </header>
-    
+      
       <main id="content" class="site-content" role="main">
-    
-        <section id="intro" class="full-screen pt-5 blue positon-rel text-is-best">
-          <img class="main-img" src="./img/img-1.jpg" alt="" style="height: 100%; width:100%;" >
-          <div class="container position-abs">
-            <div class="text-center">
-              <p class="anim2"> <span>  Make it</span> </p>
-              <div class="border"></div>
-              <div class="text-heading">
-                <h1 class="anim1">
-                    <span> Dramagic</span>
-                </h1>
+        <div id="fistPage">
+          <section id="intro" class="uq-section full-screen one-page-first-page pt-5 blue positon-rel page-effect" >
+            <div class="container position-abs ">
+              <div class="di-flex">
+                <div class="text-center">
+                  <p class="anim2"> <span>  Make it</span> </p>
+                  <div class="text-heading">
+                    <h1 class="anim1">
+                        <span> Dramagic</span>
+                    </h1>
+                  </div>
+                  <div class="border"><span class="spacer">with the</span></div>
+                  <div class="text-heading">
+                    <h1 class="anim1">
+                      <span>  <img src="<%=require('./img/R6.png')%>" alt=""></span>
+                    </h1>
+                    <p class="anim2 view-price"> <span> <a href="#!" class="view-price">view price</a> </span> </p>
+                  </div>
+                </div>
+                <div class="cammera-img">
+                  <img src="<%=require('./img/CAMERA.png')%>" alt="">
+                </div>
               </div>
             </div>
+            <div class="bottom-container">
+              <div class="progerss-input">
+                <progress max="100" value="0" class="page-progress"></progress>
+              </div>
+              <a href="#testPAnnel" class="anchor next-btn"> <i class="arrow right"></i></a>
+            </div>
+          </section>
+          <section id="second-fold" class="uq-section full-screen one-page-second-page pt-5 black-bg positon-rel page-effect" >
+            <div class="container">
+              <div class="di-flex">
+                <div class="image-box">
+                  <img src="<%=require('./img/CAMERA.png')%>" alt="" class="camera-img">
+                </div>
+                <div class="text-content">
+                  <h2 class="title">50% DRAMA + 50% MAGIC </h2>
+                  <p><span> Every creator dreams of that one act - one that keeps the audience on the edge of their seats and takes their imagination to where it's never been. Just as an actor on stage entertains and a magician enchants, they strive to put on a show that is just as dramatic as it is magical. With Canon Super R in their hand, they get their prowess and power to perform, amaze and spellbind.</span></p>
+                  <p><span> Full HD 180p + 6K 60p RAW, HDR (Moving Objects) + Dual Pixel CMOS AF II  and Up to 40 fps Continuous Shooting + Co-ordinated IS. Super R is your best bet when you want to deliver a masterpiece that has equal amounts of drama and magic and to Make It DRAMAGIC.</span></p>
+                  <a href="#!"></a>
+                </div>
+              </div>
+            </div>
+            <!-- <img class="main-img" src="./img/img-1.jpg" alt="" style="height: 100%; width:100%;" > -->
+            <!-- <div class="container position-abs">
+              <div class="di-flex">
+                <div class="text-center">
+                  <p class="anim2"> <span>  Make it</span> </p>
+                  <div class="text-heading">
+                    <h1 class="anim1">
+                        <span> Dramagic</span>
+                    </h1>
+                  </div>
+                  <div class="border"><span class="spacer"></span>with the<span class="spacer"></span></div>
+                  <div class="text-heading">
+                    <h1 class="anim1">
+                        <span> Dramagic</span>
+                    </h1>
+                  </div>
+                </div>
+                <div class="cammera-img">
+                  <img src="./img/CAMERA.png" alt="">
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="owl-container">
+              <div id="filmsCarousel" class="owl-carousel owl-theme films-carousel">
+                <div class="item">
+                  <div class="art-card">
+                    <img src="<%= require('./img/img-1.jpg') %>" alt="" style="height: 100%; width:100%;" >
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="art-card">
+                    <img src="<%= require('./img/img-1.jpg') %>"  alt="" style="height: 100%; width:100%;" >
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="art-card">
+                    <img src="<%= require('./img/img-1.jpg') %>"  alt="" style="height: 100%; width:100%;" >
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="art-card">
+                    <img src="<%= require('./img/img-1.jpg') %>"  alt="" style="height: 100%; width:100%;" >
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="bottom-container">
+              <div class="progerss-input">
+                <progress max="100"  value="0" class="page-progress"></progress>
+              </div>
+              <a href="#testPAnnel" class="anchor next-btn"> <i class="arrow right"></i></a>
+            </div>
+          </section>
+        </div>
+        <section class="uq-section full-screen pt-5 positon-rel  one-page-third-page" id="testPAnnel">
+          <div class="container">
+            <div class="di-flex">
+              <h2 class="title">Make It <br>
+                DRAMAGIC Film</h2>
+              <p><span>Part a legendary theatre act, part magic show, the Make It DRAMAGIC film   sees one exquisite  scenario after another, each unfolding into the other,  creating a seamless experience that is nothing other than DRAMAGIC. Different worlds across land, water and air come together and merge into one creating a multi-sensory experience that is vivid, vibrant and by all means DRAMAGIC. </span></p>
+              <p><span>Experience it to believe it. Performed with the Super R.</span></p>
+            </div>
           </div>
+          <!-- <a href="#playSection" class="anchor pata-nahi"> -->
+            <img src="<%=require('./img/play-btn.png')%>" alt="" class="popup1_open pata-nahi">
+            <!-- Panel 1 -->
+          <!-- </a> -->
 
+          <div class="bottom-container">
+            <div class="progerss-input">
+              <progress max="100" value="0" class="page-progress"></progress>
+            </div>
+            <a href="#testPAnnel" class="anchor">Panel 1</a>
+          </div>
         </section>
-        <section class="full-screen pt-5 blue text-is-best">
-          <a href="#!" style="height: 100%; width:100%;">
-            <img src="./img/index02 (3).jpg" alt="" style="height: 100%; width:100%;">
-          </a>
+        <section class="uq-section full-screen pt-5 red-bg positon-rel scale-effect" id="playSection">
+          
+          <img src="<%= require('./img/CAMERA.png') %>" alt="">
+          
+          <div class="bottom-container">
+            <div class="progerss-input">
+              <progress max="100" value="0" class="page-progress"></progress>
+            </div>
+            <a href="#testPAnnel" class="anchor">Panel 1</a>
+          </div>
         </section>
         <section id="panels">
     
           <div id="panels-container" style="width: 500%;">
-            <article id="panel-1" class="panel full-screen red" >
-              <img src="./img/index02 (1).jpg" alt="" style="height: 100%; width:100%;">
+            <article id="panel-1" class="uq-section panel full-screen red" >
+              <img src="<%= require('./img/index02 (1).jpg') %>" alt="" style="height: 100%; width:100%;">
               <!-- <div>
 
               </div> -->
@@ -79,14 +260,17 @@
                   </div>
                 </div> -->
               <!-- </div> -->
+              <div class="bottom-container">
+                <div class="progerss-input">
+                  <progress max="100" value="0" class="page-progress"></progress>
+                </div>
+                <a href="#testPAnnel" class="anchor">Panel 1</a>
+              </div>
             </article>
-            <!-- <article>
-              <img src="./img/index02 (2).jpg" alt="" style="height: 100%; width:100%;">
-
-            </article> -->
-            <article id="panel-2" class="panel full-screen orange">
+            
+            <article id="panel-2" class="uq-section panel full-screen orange">
               <a href="#!" style="height: 100%; width:100%;">
-                <img src="./img/index02 (2).jpg" alt="" style="height: 100%; width:100%;">
+                <img src="<%= require('./img/index02 (2).jpg') %>" alt="" style="height: 100%; width:100%;">
               </a>
 
 
@@ -113,8 +297,8 @@
                 </div>
               </div> -->
             </article>
-            <article id="panel-3" class="panel full-screen purple">
-              <img src="./img/index02 (3).jpg" alt="" style="height: 100%; width:100%;">
+            <article id="panel-3" class="uq-section panel full-screen purple">
+              <img src="<%= require('./img/index02 (3).jpg') %>" alt="" style="height: 100%; width:100%;">
 
               <!-- <div class="container">
                 <div class="row">
@@ -139,12 +323,12 @@
                 </div>
               </div> -->
             </article>
-            <article id="panel-4" class="panel full-screen green">
+            <article id="panel-4" class="uq-section panel full-screen green">
               <div class="container">
                 <div class="row">
                   <div class="col-6">
     
-                    <img src="" alt="">
+                    <!-- <img src="" alt=""> -->
     
                   </div>
                   <div class="col-6 d-flex flex-column">
@@ -163,12 +347,12 @@
                 </div>
               </div>
             </article>
-            <article id="panel-5" class="panel full-screen gray">
+            <article id="panel-5" class="uq-section panel full-screen gray">
               <div class="container">
                 <div class="row">
                   <div class="col-6">
     
-                    <img src="" alt="">
+                    <!-- <img src="" alt=""> -->
     
                   </div>
                   <div class="col-6 d-flex flex-column">
@@ -189,10 +373,17 @@
           </div>
         </section>
     
-        <section id="map" class="full-screen"></section>
+        <section id="map" class="uq-section full-screen"></section>
     
       </main>
-    
+      <!-- <button class="popup1_open">Click me! </button> -->
     </div>
+    <section id="popup1">
+      <video class="video-tag" controls poster="<%=require('./img/video-img.jpg')%>">
+        <source src="./video/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+    </section>
   </body>
 </html>

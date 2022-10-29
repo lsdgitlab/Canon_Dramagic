@@ -45,8 +45,10 @@
   "dependencies": {
     "gsap": "^3.11.3",
     "jquery": "^3.6.1",
+    "jquery-popup-overlay": "^2.1.5",
     "jquery-scrolla": "^0.0.3",
     "locomotive-scroll": "^4.1.4",
-    "lozad": "^1.16.0"
+    "lozad": "^1.16.0",
+    "owl.carousel": "^2.3.4"
   }
 }

@@ -38,24 +38,3 @@
     right: 0
   }
 }
-.next-btn{
-  width: 74px;
-  height: 74px;
-  border-radius: 37px;
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 24px;
-  .arrow {
-    border: solid black;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 6px;
-  }
-  
-  .right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-  }
-}

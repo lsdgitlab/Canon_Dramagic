@@ -108,7 +108,6 @@ header{
     box-sizing: border-box;
     position: relative;
     z-index: 10;    
-    margin-left: auto;
   }
   .hamburger-menu {
     float: right;
@@ -123,8 +122,6 @@ header{
     cursor: pointer;
     z-index: 11;
     position: relative;
-    margin-left: auto;
-
     .bar{
         -webkit-transition: all 0.1s ease;
         -moz-transition: all 0.1s ease;
@@ -293,9 +290,9 @@ header{
       .col-input{
         position: relative;
         margin-bottom: 10px;
-        // .control{
+        .control{
 
-        // }
+        }
         .label{
           width: 100%;
           font-size: 18px;
