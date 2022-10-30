@@ -11,22 +11,22 @@ var tl = gsap.timeline({ defaults: { ease: "ShowMo.easeOut" } });
 
 tl.from(".anim1 span", {
   y: "-100%",
-  duration: 1.8,
-  stagger: 0.6,
+  duration: 0.2,
+  stagger: 0.1,
   // opacity: 0,
 }).to(".anim1 span", { 
 	y: "0%", 
-	duration: 1.8, 
+	duration: 0.2, 
 	// opacity: 1 
 });
 var tl = gsap.timeline({ defaults: { ease: "ShowMo.easeOut" } });
 tl.from(".anim2 span", {
   y: "100%",
   rotation: 0,
-  duration: 1.8,
+  duration: 0.2,
   stagger: 0.6,
   opacity: 0,
-}).to(".anim2 span", { y: "0%", duration: 1.8, rotation: 0, opacity: 1 });
+}).to(".anim2 span", { y: "0%", duration: 0.2, rotation: 0, opacity: 1 });
 
 
 /* Main navigation */
@@ -122,6 +122,12 @@ gsap.to("#second-fold", {
 }
 });
 
+$(".next-btn").on('click',function(event){
+	event.preventDefault();
+	let elemHe = $('.uq-section').outerHeight();
+	$('html, body').animate({scrollTop: '+='+elemHe}, 800);
+
+});
 // tl.fromTo(".scale-effect",{
 //   scale: 0.35,
 //   opacity: 0.40,

@@ -96,11 +96,16 @@
           <button class="close-btn">X</button>
         </div>
       </header>
-      
+      <div class="bottom-container">
+        <div class="progerss-input">
+          <progress max="100" value="0" class="page-progress"></progress>
+        </div>
+        <a class="next-btn"> <i class="arrow right"></i></a>
+      </div>
       <main id="content" class="site-content" role="main">
         <div id="fistPage">
           <section id="intro" class="uq-section full-screen one-page-first-page pt-5 blue positon-rel page-effect" >
-            <div class="container position-abs ">
+            <div class="container ">
               <div class="di-flex">
                 <div class="text-center">
                   <p class="anim2"> <span>  Make it</span> </p>
@@ -122,12 +127,12 @@
                 </div>
               </div>
             </div>
-            <div class="bottom-container">
+            <!-- <div class="bottom-container pos-arrow-abs">
               <div class="progerss-input">
                 <progress max="100" value="0" class="page-progress"></progress>
               </div>
-              <a href="#testPAnnel" class="anchor next-btn"> <i class="arrow right"></i></a>
-            </div>
+              <a href="#second-fold" class="anchor next-btn"> <i class="arrow right"></i></a>
+            </div> -->
           </section>
           <section id="second-fold" class="uq-section full-screen one-page-second-page pt-5 black-bg positon-rel page-effect" >
             <div class="container">
@@ -143,6 +148,12 @@
                 </div>
               </div>
             </div>
+            <!-- <div class="bottom-container pos-arrow-abs">
+              <div class="progerss-input">
+                <progress max="100" value="0" class="page-progress"></progress>
+              </div>
+              <a href="#testPAnnel" class="anchor next-btn"> <i class="arrow right"></i></a>
+            </div> -->
             <!-- <img class="main-img" src="./img/img-1.jpg" alt="" style="height: 100%; width:100%;" > -->
             <!-- <div class="container position-abs">
               <div class="di-flex">
@@ -189,12 +200,12 @@
                 </div>
               </div>
             </div> -->
-            <div class="bottom-container">
+            <!-- <div class="bottom-container">
               <div class="progerss-input">
                 <progress max="100"  value="0" class="page-progress"></progress>
               </div>
               <a href="#testPAnnel" class="anchor next-btn"> <i class="arrow right"></i></a>
-            </div>
+            </div> -->
           </section>
         </div>
         <section class="uq-section full-screen pt-5 positon-rel  one-page-third-page" id="testPAnnel">
@@ -206,34 +217,46 @@
               <p><span>Experience it to believe it. Performed with the Super R.</span></p>
             </div>
           </div>
-          <!-- <a href="#playSection" class="anchor pata-nahi"> -->
-            <img src="<%=require('./img/play-btn.png')%>" alt="" class="popup1_open pata-nahi">
-            <!-- Panel 1 -->
-          <!-- </a> -->
+          <img src="<%=require('./img/play-btn.png')%>" alt="" class="popup1_open pata-nahi">
+         
 
-          <div class="bottom-container">
+          <!-- <div class="bottom-container">
             <div class="progerss-input">
               <progress max="100" value="0" class="page-progress"></progress>
             </div>
             <a href="#testPAnnel" class="anchor">Panel 1</a>
-          </div>
+          </div> -->
         </section>
-        <section class="uq-section full-screen pt-5 red-bg positon-rel scale-effect" id="playSection">
-          
-          <img src="<%= require('./img/CAMERA.png') %>" alt="">
-          
-          <div class="bottom-container">
-            <div class="progerss-input">
-              <progress max="100" value="0" class="page-progress"></progress>
-            </div>
-            <a href="#testPAnnel" class="anchor">Panel 1</a>
-          </div>
-        </section>
+       
         <section id="panels">
     
           <div id="panels-container" style="width: 500%;">
-            <article id="panel-1" class="uq-section panel full-screen red" >
-              <img src="<%= require('./img/index02 (1).jpg') %>" alt="" style="height: 100%; width:100%;">
+            <article id="panel-1" class="uq-section panel full-screen black-bg" >
+              <div class="owl-container">
+              <div id="filmsCarousel" class="owl-carousel owl-theme films-carousel">
+                <div class="item">
+                  <div class="art-card">
+                    <img src="<%= require('./img/caro-1.jpg') %>" alt="" style="height: 100%; width:100%;" >
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="art-card">
+                    <img src="<%= require('./img/caro-2.jpg') %>"  alt="" style="height: 100%; width:100%;" >
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="art-card">
+                    <img src="<%= require('./img/caro-3.jpg') %>"  alt="" style="height: 100%; width:100%;" >
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="art-card">
+                    <img src="<%= require('./img/caro-1.jpg') %>"  alt="" style="height: 100%; width:100%;" >
+                  </div>
+                </div>
+              </div>
+            </div>
+              <!-- <img src="<%= require('./img/index02 (1).jpg') %>" alt="" style="height: 100%; width:100%;"> -->
               <!-- <div>
 
               </div> -->
@@ -260,18 +283,39 @@
                   </div>
                 </div> -->
               <!-- </div> -->
-              <div class="bottom-container">
+              <!-- <div class="bottom-container">
                 <div class="progerss-input">
                   <progress max="100" value="0" class="page-progress"></progress>
                 </div>
                 <a href="#testPAnnel" class="anchor">Panel 1</a>
-              </div>
+              </div> -->
             </article>
             
-            <article id="panel-2" class="uq-section panel full-screen orange">
-              <a href="#!" style="height: 100%; width:100%;">
+            <article id="panel-2" class="uq-section panel full-screen one-page-third-page horse-bg">
+              <div class="container">
+                <div class="di-flex">
+                  <h2 class="title">50% SPONTANEITY</h2>
+                  <h2 class="title title-new">Full HD 180p + 4K 60p RAW</h2>
+                  <p>Whether it’s a galloping horse or a bullet train speeding towards <br>
+                    its destination, capture every single detail that makes the story complete. <br>
+                    From the fine sand to the lights from the train, freeze every object <br>
+                    to bring alive one of the elements that create <br>
+                    DRAMA + MAGIC - Spontaneity.</p>
+                    <p><span class="blue-color"> Full HD 180p + 4K 60p RAW together</span> <br>
+                    become your dramatic wizardry. <br>
+                    Ace timing and pacing and go <br>
+                    impromptu with these <br>
+                    dramagical features.</p>
+                </div>
+                <div class="img-info">
+                  <img src="<%=require('./img/fhd.png')%>" alt="">
+                  <img src="<%=require('./img/raw.png')%>" alt="">
+                </div>
+              </div>
+              <img src="<%=require('./img/play-btn.png')%>" alt="" class="popup1_open pata-nahi">
+              <!-- <a href="#!" style="height: 100%; width:100%;">
                 <img src="<%= require('./img/index02 (2).jpg') %>" alt="" style="height: 100%; width:100%;">
-              </a>
+              </a> -->
 
 
               <!-- <div class="container">
@@ -297,8 +341,30 @@
                 </div>
               </div> -->
             </article>
-            <article id="panel-3" class="uq-section panel full-screen purple">
-              <img src="<%= require('./img/index02 (3).jpg') %>" alt="" style="height: 100%; width:100%;">
+            <article id="panel-3" class="uq-section panel full-screen one-page-third-page water-img">
+              <div class="container">
+                <div class="di-flex">
+                  <div class="rt-section">
+                    <h2 class="title">50% SPELL <br>
+                      HDR	 <span class="text-small">  <span class="text-16">  Moving</span>
+                      <span class="text-16">  Objects</span></span>   + Dual Pixel <br>
+                      CMOS AF II </h2>
+                    <p>Underwater or above clouds, it’s the slow movements and fast motion that make room for  some improvisation and some abracadabra. The finest AF capabilities for subject tracking and detection over a wide area with a high density of AF sensor pixels make for the right amount of fiction and fantasy. Find focus even amidst high-paced action and stay with it, for a scene filled with theatrics and magic dust.
+                      </p>
+                      <div class="img-info-water">
+                        <img src="<%=require('./img/HDR.png')%>" alt="">
+                        <img src="<%=require('./img/raw.png')%>" alt="">
+                      </div>
+
+                      <p class="bottom-text">*According to Canon measurement and testing standards. <br>
+                        For details visit ad search product at <a href="https://in.canon/en/support">https://in.canon/en/support</a> </p>
+                  </div>
+                </div>
+              </div>
+
+             
+              <img src="<%=require('./img/play-btn.png')%>" alt="" class="popup1_open pata-nahi"> 
+              <!-- <img src="<%= require('./img/index02 (3).jpg') %>" alt="" style="height: 100%; width:100%;"> -->
 
               <!-- <div class="container">
                 <div class="row">
@@ -323,67 +389,87 @@
                 </div>
               </div> -->
             </article>
-            <article id="panel-4" class="uq-section panel full-screen green">
+            <article id="panel-4" class="uq-section panel full-screen one-page-third-page horse-bg girl-bg">
               <div class="container">
-                <div class="row">
-                  <div class="col-6">
-    
-                    <!-- <img src="" alt=""> -->
-    
-                  </div>
-                  <div class="col-6 d-flex flex-column">
-    
-                    <h2>Panel 4</h2>
-    
-                    <p class="step-description">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
-                    </p>
-    
-                    <div class="panels-navigation">
-                      <div class="nav-panel" data-sign="minus"><a href="#panel-3" class="anchor">Prev</a></div>
-                      <div class="nav-panel" data-sign="plus"><a href="#panel-5" class="anchor">Next</a></div>
-                    </div>
-                  </div>
+                <div class="di-flex">
+                  <h2 class="title">50% SPECTACLE</h2>
+                  <h2 class="title title-new">Up to 40 fps <br>
+                    Continuous Shooting <br>
+                    + Co-ordinated IS </h2>
+                  <p>High-flying acrobatics or graceful movements in the air, rule the stage 
+                    up to 40 frames per second continuous shooting burst and coordinated
+                    image stabilisation. When sudden and unpredicted is the nature of the
+                    performance, get an edge over it with your dramatic precision and alchemy.</p>
+                </div>
+                <div class="img-info">
+                  <img src="<%=require('./img/40fps.png')%>" alt="">
+                  <img src="<%=require('./img/IS.png')%>" alt="">
                 </div>
               </div>
+              <img src="<%=require('./img/play-btn.png')%>" alt="" class="popup1_open pata-nahi">
             </article>
-            <article id="panel-5" class="uq-section panel full-screen gray">
+            <article id="panel-3" class="uq-section panel full-screen one-page-first-page one-page-third-page water-img girl-2-bg">
               <div class="container">
-                <div class="row">
-                  <div class="col-6">
-    
-                    <!-- <img src="" alt=""> -->
-    
-                  </div>
-                  <div class="col-6 d-flex flex-column">
-    
-                    <h2>Panel 5</h2>
-    
-                    <p class="step-description">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Including versions of Lorem Ipsum.
-                    </p>
-    
-                    <div class="panels-navigation text-right">
-                      <div class="nav-panel" data-sign="minus"><a href="#panel-4" class="anchor">Prev</a></div>
+                <div class="di-flex">
+                  <div class="rt-section">
+                    <div class="text-center">
+                      <h3 class="anim2"> <span>  Make it</span> </h3>
+                      <div class="text-heading">
+                        <h2 class="anim1">
+                            <span> Dramagic</span>
+                        </h2>
+                      </div>
                     </div>
+                    <div class="di-flex img-info-water">
+                      <div class="icon">
+                        <img src="<%=require('./img/fhd.png')%>" alt="">
+                      </div> 
+                      <div class="icon">
+                        <img src="<%=require('./img/raw.png')%>" alt="">
+                      </div>
+                      <div class="icon">
+                        <img src="<%=require('./img/HDR.png')%>" alt="">
+                      </div>
+                      <div class="icon">
+                        <img src="<%=require('./img/40fps.png')%>" alt="">
+                      </div> 
+                      <div class="icon">
+                        <img src="<%=require('./img/IS.png')%>" alt="">
+                      </div>
+                    </div>
+
+                      
                   </div>
                 </div>
               </div>
+              <img src="<%=require('./img/play-btn.png')%>" alt="" class="popup1_open pata-nahi"> 
             </article>
           </div>
         </section>
     
-        <section id="map" class="uq-section full-screen"></section>
+        <section id="map" class="uq-section full-screen last-bg">
+          <div class="container">
+            <div class="di-flex">
+              <div class="img-box">
+                <img src="<%=require('./img/camera-center.png')%>" alt="">
+              </div>
+              <div class="text-box">
+                  <img src="<%=require('./img/R6.png')%>" alt="">
+              </div>
+            </div>
+          </div>
+        </section>
     
       </main>
       <!-- <button class="popup1_open">Click me! </button> -->
+      <section id="popup1">
+        <video class="video-tag" controls poster="<%=require('./img/video-img.jpg')%>">
+          <source src="./video/mov_bbb.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        
+      </section>
     </div>
-    <section id="popup1">
-      <video class="video-tag" controls poster="<%=require('./img/video-img.jpg')%>">
-        <source src="./video/mov_bbb.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      
-    </section>
+   
   </body>
 </html>

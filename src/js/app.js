@@ -7,7 +7,14 @@ console.log("popup")
 console.log(popup)
 
 $('#popup1').popup({
-  closebutton: true
+  closebutton: true,
+  // focusdelay: 400, // for smoother slide-in animations on Android
+  // outline: true,
+  // vertical: 'top',
+  scrolllock: true,
+  escape: false,
+  blur: false,
+  transition: 'all 0.9s'
 });
 // $('#popup1').popup('show');
 // let obj = {a:1};
@@ -18,9 +25,10 @@ $('#popup1').popup({
 if ($('#filmsCarousel').length) {
   let filmsCarousel = $("#filmsCarousel").owlCarousel({
     margin:30,
-    items: 3,
+    items: 2.6,
     dots:false,
     nav:false,
+    loop:false,
     // stagePadding: 200,
     // navText: ["<img src='./../img/arrow.png'>","<img src='./../img/arrow.png'>"],
     // autoplayTimeout: 5000,
