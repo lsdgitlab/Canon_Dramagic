@@ -3,8 +3,17 @@ import $ from "jquery";
 import lozad from 'lozad';
 import 'owl.carousel';
 var popup = require("jquery-popup-overlay");
-console.log("popup")
-console.log(popup)
+import "./page-animation/scrolla.js";
+
+// var scroll = require("")
+// import { scrolla } from "./page-animation/";
+console.log("scroll")
+console.log(scroll)
+$(".animate").scrolla({
+  mobile: true, 
+});
+// console.log("popup")
+// console.log(popup)
 
 $('#popup1').popup({
   closebutton: true,
