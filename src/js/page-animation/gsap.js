@@ -62,26 +62,26 @@ let panelsContainer = document.querySelector("#panels-container"), fistPage = do
 	});
 
 
-	const panels = gsap.utils.toArray("#panels-container .panel");
-	tween = gsap.to(panels, {
-  xPercent: -100 * (panels.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#panels-container",
-    pin: true,
-    start: "top top",
-    scrub: 1,
-		// pinSpacing: false,
-		// onUpdate: self => console.log("progress:", self),
-		// pinSpacing: false,
-    snap: {
-      snapTo: 1 / (panels.length - 1),
-      inertia: false,
-      duration: { min: 0.1, max: 0.1 },
-    },
-    end: () => "+=" + (panelsContainer.offsetWidth - innerWidth),
-  },
-});
+// 	const panels = gsap.utils.toArray("#panels-container .panel");
+// 	tween = gsap.to(panels, {
+//   xPercent: -100 * (panels.length - 1),
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: "#panels-container",
+//     pin: true,
+//     start: "top top",
+//     scrub: 1,
+// 		// pinSpacing: false,
+// 		// onUpdate: self => console.log("progress:", self),
+// 		// pinSpacing: false,
+//     snap: {
+//       snapTo: 1 / (panels.length - 1),
+//       inertia: false,
+//       duration: { min: 0.1, max: 0.1 },
+//     },
+//     end: () => "+=" + (panelsContainer.offsetWidth - innerWidth),
+//   },
+// });
 
 // gsap.to("#intro", {
 //   scrollTrigger: {
@@ -94,48 +94,67 @@ let panelsContainer = document.querySelector("#panels-container"), fistPage = do
 // }
 // });
 
-gsap.to("#panel-2 #titleSecondText", {
-	xPercent: -100,
-	x: -innerWidth,
-	ease: "none",
-	scrollTrigger: {
-			pinnedContainer: "#panel-2",
-			trigger: "#titleSecondText",
-			markers: true,
-			start: "bottom bottom",
-			end: () => innerWidth,
-			scrub: true,
-		invalidateOnRefresh: true
-	}
+// gsap.to("#panel-2 #titleSecondText", {
+// 	xPercent: -100,
+// 	x: -innerWidth,
+// 	ease: "none",
+// 	scrollTrigger: {
+// 			pinnedContainer: "#panel-2",
+// 			trigger: "#titleSecondText",
+// 			markers: true,
+// 			start: "bottom bottom",
+// 			end: () => innerWidth,
+// 			scrub: true,
+// 		invalidateOnRefresh: true
+// 	}
+// });
+
+// const pageEffect = gsap.utils.toArray("#fistPage .page-effect");
+// console.log(pageEffect)
+// console.log(fistPage.offsetWidth - innerWidth)
+// gsap.to(pageEffect, {
+//   scrollTrigger: {
+// 		trigger: "#fistPage",
+// 		start: "top top", 
+// 		// pin: true, 
+// 		// pinSpacing: false,
+// 		duration: 1, 
+// 		ease: "none",
+// 		scrub: true,
+// 		snap:1 / (pageEffect.length - 1 ),
+//     end: () => "+=" + (fistPage.offsetWidth - innerWidth),
+//   },
+// });
+// gsap.to("#second-fold", {
+//   scrollTrigger: {
+//     trigger: "#second-fold",
+// 		start: "top top", 
+// 		pin: true, 
+// 		pinSpacing: false,
+// 		ease: "none",
+// 		scrub: true,
+// 		opacity:0
+// }
+// });
+
+gsap.utils.toArray(".uq-section").forEach((panel, i) => {
+	console.log("panel")
+	console.log(panel)
+	console.log(i)
+  ScrollTrigger.create({
+    trigger: panel,
+    start: "top top", 
+    pin: true, 
+    pinSpacing: false 
+  });
 });
 
-const pageEffect = gsap.utils.toArray("#fistPage .page-effect");
-console.log(pageEffect)
-console.log(fistPage.offsetWidth - innerWidth)
-gsap.to(pageEffect, {
-  scrollTrigger: {
-		trigger: "#fistPage",
-		start: "top top", 
-		// pin: true, 
-		// pinSpacing: false,
-		duration: 1, 
-		ease: "none",
-		scrub: true,
-		snap:1 / (pageEffect.length - 1 ),
-    end: () => "+=" + (fistPage.offsetWidth - innerWidth),
-  },
+
+ScrollTrigger.create({
+  snap: 1 / 8 // snap whole page to the closest section!
 });
-gsap.to("#second-fold", {
-  scrollTrigger: {
-    trigger: "#second-fold",
-		start: "top top", 
-		pin: true, 
-		pinSpacing: false,
-		ease: "none",
-		scrub: true,
-		opacity:0
-}
-});
+
+
 
 $(".next-btn").on('click',function(event){
 	event.preventDefault();
@@ -246,7 +265,7 @@ $(".next-btn").on('click',function(event){
 
 
 gsap.to('.page-progress', {
-  value: 100,
+  value: 120,
   ease: 'none',
   scrollTrigger: { 
     trigger: "#page",
