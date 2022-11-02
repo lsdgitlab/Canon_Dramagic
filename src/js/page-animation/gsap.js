@@ -94,6 +94,21 @@ let panelsContainer = document.querySelector("#panels-container"), fistPage = do
 // }
 // });
 
+gsap.to("#panel-2 #titleSecondText", {
+	xPercent: -100,
+	x: -innerWidth,
+	ease: "none",
+	scrollTrigger: {
+			pinnedContainer: "#panel-2",
+			trigger: "#titleSecondText",
+			markers: true,
+			start: "bottom bottom",
+			end: () => innerWidth,
+			scrub: true,
+		invalidateOnRefresh: true
+	}
+});
+
 const pageEffect = gsap.utils.toArray("#fistPage .page-effect");
 console.log(pageEffect)
 console.log(fistPage.offsetWidth - innerWidth)

@@ -74,7 +74,9 @@ $(document).ready(function(){
 
 });
 
+// const array1 = [1, 2, 'a', '1a'];
 
+// console.log(array1.map(item=> tem));
 
 let selectInput ,allInput;
 // console.log(selectInput.length);
